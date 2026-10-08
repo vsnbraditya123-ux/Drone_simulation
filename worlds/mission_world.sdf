@@ -90,5 +90,61 @@
       <longitude_deg> 8.546163739800146</longitude_deg>
       <elevation>488</elevation>
     </spherical_coordinates>
-  </world>
+<include>
+      <name>oak_tree_1</name>
+      <pose>6 6 0 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Oak tree</uri>
+    </include>
+
+    <include>
+      <name>oak_tree_2</name>
+      <pose>-8 12 0 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Oak tree</uri>
+    </include>
+
+    <include>
+      <name>pine_tree_1</name>
+      <pose>10 -8 0 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Pine tree</uri>
+    </include>
+<model name="road_1">
+  <static>true</static>
+  <pose>0 20 0.01 0 0 0</pose>
+  <link name="link">
+    <visual name="visual">
+      <geometry><box><size>100 8 0.02</size></box></geometry>
+      <material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material>
+    </visual>
+  </link>
+</model>
+
+<model name="building_1">
+  <static>true</static>
+  <pose>15 30 10 0 0 0</pose>
+  <link name="link">
+    <collision name="collision"><geometry><box><size>10 10 20</size></box></geometry></collision>
+    <visual name="visual">
+      <geometry><box><size>10 10 20</size></box></geometry>
+      <material><ambient>0.6 0.6 0.65 1</ambient><diffuse>0.6 0.6 0.65 1</diffuse></material>
+    </visual>
+  </link>
+</model>
+
+<model name="tree_1">
+  <static>true</static>
+  <pose>-10 12 0 0 0 0</pose>
+  <link name="link">
+    <visual name="trunk">
+      <pose>0 0 1.5 0 0 0</pose>
+      <geometry><cylinder><radius>0.3</radius><length>3</length></cylinder></geometry>
+      <material><ambient>0.4 0.25 0.1 1</ambient><diffuse>0.4 0.25 0.1 1</diffuse></material>
+    </visual>
+    <visual name="leaves">
+      <pose>0 0 4 0 0 0</pose>
+      <geometry><sphere><radius>1.8</radius></sphere></geometry>
+      <material><ambient>0.1 0.5 0.1 1</ambient><diffuse>0.1 0.5 0.1 1</diffuse></material>
+    </visual>
+  </link>
+</model>
+</world>
 </sdf>
